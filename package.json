@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "deploy": "npm run build && git add . && git commit -m 'Update Project Portfolio' && git push",
     "lint": "eslint .",
     "preview": "vite preview"
   },
