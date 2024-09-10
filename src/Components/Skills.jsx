@@ -1,3 +1,5 @@
+import imgHtml from "../assets/skillsImage/html.png";
+
 function Skills() {
   const skillClass = "rounded-[18px] p-1 w-[60px] h-[60px]";
 
@@ -5,7 +7,7 @@ function Skills() {
     <>
       <div className="w-auto px-7 grid gap-8 grid-cols-4">
         <div className={`${skillClass} bg-[#E65000]`}>
-          <img src="/src/assets/skillsImage/html.png" alt="html logo" />
+          <img src={`${imgHtml}`} alt="html logo" />
         </div>
         <div className={`${skillClass} bg-[#0477BD]`}>
           <img src="/src/assets/skillsImage/css.png" alt="css logo" />
