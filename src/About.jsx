@@ -10,7 +10,7 @@ function About() {
             to="about-section"
             smooth={true}
             duration={500} // duración de la animación en milisegundos
-            offset={-120}
+            offset={-100}
           >
             About
           </Link>

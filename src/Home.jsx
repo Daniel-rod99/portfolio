@@ -1,6 +1,6 @@
 import ImageProfile from "./Components/ImageProfile";
 import About from "./About";
-import Projects from "./Projects";
+import ProjectsPage from "./ProjectsPage";
 import Arrow from "./Components/Arrow";
 import { Element } from "react-scroll";
 
@@ -29,12 +29,12 @@ function Home() {
         </div>
       </Element>
 
-      <Element name="about-section" className="element h-[86vh]">
+      <Element name="about-section" className="element h-[100vh]">
         <About />
       </Element>
 
       <Element name="projects-section" className="element h-[100vh]">
-        <Projects />
+        <ProjectsPage />
       </Element>
     </>
   );

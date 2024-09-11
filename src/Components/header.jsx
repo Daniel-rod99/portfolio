@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 function Header() {
   return (
     <header className="fixed top-0 left-0 w-full bg-[var(--fondo)] shadow-md z-50">
-      <div className="relative w-auto h-[7vh] flex justify-between px-7 items-center">
+      <div className="relative w-auto h-[10vh] flex justify-between px-7 items-center">
         <h1 className="font-bold md:text-3xl text-2xl hover:cursor-pointer">
           <Link
             to="home-section"
@@ -38,7 +38,7 @@ function Header() {
                 to="about-section"
                 smooth={true}
                 duration={500} // duración de la animación en milisegundos
-                offset={-120}
+                offset={-100}
               >
                 About
               </Link>
@@ -48,7 +48,7 @@ function Header() {
                 to="projects-section"
                 smooth={true}
                 duration={500} // duración de la animación en milisegundos
-                offset={-120}
+                offset={-100}
               >
                 Projects
               </Link>

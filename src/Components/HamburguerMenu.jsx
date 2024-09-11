@@ -146,7 +146,7 @@ function HamburgerMenu() {
                 to="about-section"
                 smooth={true}
                 duration={500} // duración de la animación en milisegundos
-                offset={-120}
+                offset={-100}
                 onClick={handleLinkClick} // Cierra el menu hamburguesa
               >
                 About
@@ -157,7 +157,7 @@ function HamburgerMenu() {
                 to="projects-section"
                 smooth={true}
                 duration={500} // duración de la animación en milisegundos
-                offset={-120}
+                offset={-100}
                 onClick={handleLinkClick} // Cierra el menu hamburguesa
               >
                 Projects
