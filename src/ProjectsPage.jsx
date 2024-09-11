@@ -1,5 +1,6 @@
 import { Link } from "react-scroll";
 import Project from "./Components/Project";
+import cvProjectImage from "./assets/ProjectsImages/cvProject.png";
 
 function ProjectsPage() {
   return (
@@ -17,7 +18,10 @@ function ProjectsPage() {
         </h1>
       </div>
 
-      <Project nameProject={"21 BlackJack Game"} />
+      <Project
+        nameProject={"21 BlackJack Game"}
+        imageProject={`${cvProjectImage}`}
+      />
     </>
   );
 }

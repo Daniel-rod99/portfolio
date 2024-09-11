@@ -19,36 +19,54 @@ function HamburgerMenu() {
     }
   }, [isOpen]);
 
-  // Variantes para animar el modal y el contenido de la página
+  // Variantes para animar el modal y el contenido de la página con efecto de desaceleración al final
   const modalVariants = {
-    closed: { x: "100%" }, // El modal se mueve hacia fuera de la pantalla (derecha)
-    open: { x: 0 }, // El modal cubre la pantalla
+    closed: {
+      x: "100%",
+      transition: { type: "tween", duration: 0.8, ease: "easeInOut" },
+    }, // El modal se mueve hacia fuera de la pantalla (derecha)
+    open: {
+      x: 0,
+      transition: { type: "tween", duration: 0.8, ease: "easeInOut" },
+    }, // El modal cubre la pantalla
   };
 
-  const contentVariants = {
-    closed: { x: 0 }, // El contenido se mantiene en su lugar
-    open: { x: "-100%" }, // El contenido se desplaza hacia la izquierda
-  };
-
-  // Variantes para transformar el menú hamburguesa en una flecha
+  // Variantes para transformar el menú hamburguesa en una "X"
   const topLineVariants = {
     closed: { rotate: 0, y: 0 },
-    open: { rotate: 45, y: 8 },
+    open: { rotate: 45, y: 4, transition: { duration: 0.3 } },
   };
 
   const middleLineVariants = {
     closed: { opacity: 1 },
-    open: { opacity: 0 },
+    open: { opacity: 0, transition: { duration: 0.3 } },
   };
 
   const bottomLineVariants = {
     closed: { rotate: 0, y: 0 },
-    open: { rotate: -45, y: -8 },
+    open: { rotate: -45, y: -8, transition: { duration: 0.3 } },
   };
 
-  const arrowVariants = {
-    closed: { opacity: 0, rotate: -90 },
-    open: { opacity: 1, rotate: 0 },
+  // Variantes para animar las opciones del menú (li) escalonadamente
+  const menuItemVariants = {
+    closed: (index) => ({
+      opacity: 0,
+      y: 20,
+      transition: {
+        delay: index * 0.1, // Retardo para cada li según su índice
+        duration: 0.3,
+        ease: "easeInOut",
+      },
+    }),
+    open: (index) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: index * 0.1 + 0.3, // Retardo escalonado con un inicio más tarde
+        duration: 0.3,
+        ease: "easeInOut",
+      },
+    }),
   };
 
   const handleLinkClick = () => {
@@ -58,7 +76,7 @@ function HamburgerMenu() {
   return (
     <>
       {/* Botón del menú hamburguesa */}
-      <button className="block md:hidden z-50" onClick={toggleMenu}>
+      <button className="block md:hidden z-50 relative" onClick={toggleMenu}>
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -71,26 +89,27 @@ function HamburgerMenu() {
             d="M4 6h16"
             variants={topLineVariants}
             initial="closed"
+            animate={isOpen ? "open" : "closed"} // Animación según el estado del modal
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth="2"
           />
-
-          {/* Línea del medio */}
+          {/* Línea de medio */}
           <motion.path
             d="M4 12h16"
             variants={middleLineVariants}
             initial="closed"
+            animate={isOpen ? "open" : "closed"} // Animación según el estado del modal
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth="2"
           />
-
           {/* Línea inferior */}
           <motion.path
             d="M4 18h16"
             variants={bottomLineVariants}
             initial="closed"
+            animate={isOpen ? "open" : "closed"} // Animación según el estado del modal
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth="2"
@@ -103,90 +122,34 @@ function HamburgerMenu() {
         initial="closed"
         animate={isOpen ? "open" : "closed"}
         variants={modalVariants}
-        transition={{ type: "tween", duration: 0.4 }} // Transición suave, sin rebote
+        transition={{ type: "tween", duration: 0.8 }} // Transición suave con desaceleración
         className="fixed inset-0 bg-[var(--fondo)] z-40 flex justify-center items-center"
       >
-        {/* Flecha para cerrar el menú */}
-        <button className="absolute top-5 left-5" onClick={toggleMenu}>
-          <motion.svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            className="w-8 h-8 text-white"
-            variants={arrowVariants}
-            initial="closed"
-            animate={isOpen ? "open" : "closed"}
-          >
-            <motion.path
-              d="M15 19l-7-7 7-7"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-            />
-          </motion.svg>
-        </button>
-
         {/* Nav dentro del modal */}
         <nav className="text-white text-2xl">
           <ul className="flex flex-col items-center space-y-4">
-            <li className=" hover:text-[var(--violet)] cursor-pointer">
-              <Link
-                to="home-section"
-                smooth={true}
-                duration={500} // duración de la animación en milisegundos
-                offset={-150}
-                onClick={handleLinkClick} // Cierra el menu hamburguesa
+            {["Home", "About", "Projects", "Contact"].map((item, index) => (
+              <motion.li
+                key={item}
+                className="hover:text-[var(--violet)] cursor-pointer"
+                custom={index} // Pasamos el índice como prop para el retardo escalonado
+                variants={menuItemVariants}
+                initial="closed"
+                animate={isOpen ? "open" : "closed"}
               >
-                Home
-              </Link>
-            </li>
-            <li className="hover:text-[var(--violet)] cursor-pointer">
-              <Link
-                to="about-section"
-                smooth={true}
-                duration={500} // duración de la animación en milisegundos
-                offset={-100}
-                onClick={handleLinkClick} // Cierra el menu hamburguesa
-              >
-                About
-              </Link>
-            </li>
-            <li className=" hover:text-[var(--violet)] cursor-pointer">
-              <Link
-                to="projects-section"
-                smooth={true}
-                duration={500} // duración de la animación en milisegundos
-                offset={-100}
-                onClick={handleLinkClick} // Cierra el menu hamburguesa
-              >
-                Projects
-              </Link>
-            </li>
-            <li className=" hover:text-[var(--violet)] cursor-pointer">
-              <Link
-                to="contact-section"
-                smooth={true}
-                duration={500} // duración de la animación en milisegundos
-                offset={-120}
-                onClick={handleLinkClick} // Cierra el menu hamburguesa
-              >
-                Contact
-              </Link>
-            </li>
+                <Link
+                  to={`${item.toLowerCase()}-section`}
+                  smooth={true}
+                  duration={500}
+                  offset={-100}
+                  onClick={handleLinkClick}
+                >
+                  {item}
+                </Link>
+              </motion.li>
+            ))}
           </ul>
         </nav>
-      </motion.div>
-
-      {/* Contenido de la página que se mueve hacia la izquierda */}
-      <motion.div
-        initial="closed"
-        animate={isOpen ? "open" : "closed"}
-        variants={contentVariants}
-        transition={{ type: "tween", duration: 0.4 }} // Transición suave, sin rebote
-        className="relative z-10"
-      >
-        {/* Aquí va el contenido de tu página */}
       </motion.div>
     </>
   );

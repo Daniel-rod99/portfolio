@@ -38,7 +38,7 @@ function ProjectModal({ isOpen, onClose, nameProject }) {
 ProjectModal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
-  nameProject: PropTypes.func.isRequired,
+  nameProject: PropTypes.string.isRequired,
 };
 
 export default ProjectModal;
