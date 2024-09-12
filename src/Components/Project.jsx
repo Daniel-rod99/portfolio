@@ -7,7 +7,14 @@ import { LiaExternalLinkAltSolid } from "react-icons/lia";
 const classFramwork =
   "bg-[var(--grey)] text-[var(--white)] px-1 rounded-lg text-sm";
 
-function Project({ nameProject, imageProject }) {
+function Project({
+  nameProject,
+  imageProject,
+  description,
+  gitUrl,
+  demoUrl,
+  technologies,
+}) {
   const [isOpen, setIsOpen] = useState(false);
 
   // Función para manejar el clic fuera del modal
@@ -27,9 +34,9 @@ function Project({ nameProject, imageProject }) {
   }, [isOpen]);
 
   return (
-    <div>
+    <div className="m-7 text-center h-[35vh]">
       <motion.div
-        layoutId="project"
+        layoutId={`${nameProject}`}
         className="p-3 mb-4 cursor-pointer gap-3 flex flex-col"
         onClick={() => setIsOpen(true)} // Abre el modal al hacer clic
       >
@@ -44,7 +51,7 @@ function Project({ nameProject, imageProject }) {
         {isOpen && (
           <motion.div
             id="modal-container" // ID para detectar clics fuera del modal
-            layoutId="project"
+            layoutId={`${nameProject}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -52,7 +59,7 @@ function Project({ nameProject, imageProject }) {
             className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-[#0c0a15] bg-opacity-50 z-50"
           >
             <motion.div
-              className="w-[350px] h-[70vh] bg-[var(--white)] flex flex-col items-center justify-center rounded-2xl p-5"
+              className="w-[345px] bg-[var(--white)] flex flex-col items-center justify-center rounded-2xl p-5"
               onClick={(e) => e.stopPropagation()} // Evitar que los clics dentro del modal cierren el modal
             >
               <div className="text-center text-black flex flex-col gap-3">
@@ -61,30 +68,34 @@ function Project({ nameProject, imageProject }) {
                   src={imageProject}
                   className="h-[20vh] object-contain"
                 />
-                <motion.p>
-                  This project was created to allow users to easily build a
-                  resume by simply entering their information, and then download
-                  it as a PDF.
-                </motion.p>
+                <motion.p>{`${description}`}</motion.p>
 
-                <div className="flex justify-between mt-5">
-                  <p className={classFramwork}>React</p>
-                  <p className={classFramwork}>Tailwind</p>
-                  <p className={classFramwork}>Vite</p>
-                  <p className={classFramwork}>Motion</p>
+                <div className="flex justify-between mt-5 gap-3 flex-wrap">
+                  {technologies.map((tech, index) => (
+                    <p key={index} className={classFramwork}>
+                      {tech}
+                    </p>
+                  ))}
                 </div>
 
                 <motion.div className="flex justify-evenly m-full pt-6">
                   <motion.button>
-                    <a className="flex gap-1" href="https://www.google.it">
+                    <a
+                      className="flex gap-1 items-center"
+                      href={`${gitUrl}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <FaGithub />
                       GitHub
                     </a>
                   </motion.button>
                   <motion.button>
                     <a
-                      className="flex gap-1"
-                      href="https://cv-daniel-rodriguez.netlify.app/"
+                      className="flex gap-1 items-center"
+                      href={`${demoUrl}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Demo
                       <LiaExternalLinkAltSolid />
@@ -103,6 +114,10 @@ function Project({ nameProject, imageProject }) {
 Project.propTypes = {
   nameProject: PropTypes.string.isRequired,
   imageProject: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  gitUrl: PropTypes.string.isRequired,
+  demoUrl: PropTypes.string.isRequired,
+  technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default Project;

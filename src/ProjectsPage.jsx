@@ -18,10 +18,38 @@ function ProjectsPage() {
         </h1>
       </div>
 
-      <div className="m-7 p-3 text-center h-[35vh]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Project
-          nameProject={"Curriculum Creator"}
+          nameProject="CV Builder"
           imageProject={`${cvProjectImage}`}
+          description="lorem jshdkjshjdkfhjsdhfhskdjdjfshdkfjksd skdjfhd fkjsdhf shdk djkhs dkfhsd f"
+          gitUrl="https://www.google.it"
+          demoUrl="https://cv-daniel-rodriguez.netlify.app"
+          technologies={["react", "php", "html", "css"]}
+        />
+        <Project
+          nameProject="E-commerce App"
+          imageProject="https://via.placeholder.com/150"
+          description="lorem jshdkjshjdkfhjsdhfhskdjdjfshdkfjksd skdjfhd fkjsdhf shdk djkhs dkfhsd f"
+          gitUrl="https://www.google.it"
+          demoUrl="https://cv-daniel-rodriguez.netlify.app"
+          technologies={["react", "php", "html", "css"]}
+        />
+        <Project
+          nameProject="Portfolio Website"
+          imageProject="https://via.placeholder.com/150"
+          description="hola desde la descripcion"
+          gitUrl="https://www.google.it"
+          demoUrl="https://cv-daniel-rodriguez.netlify.app"
+          technologies={["react", "php", "html", "css"]}
+        />
+        <Project
+          nameProject="Portfolio"
+          imageProject="https://via.placeholder.com/150"
+          description="lorem jshdkjshjdkfhjsdhfhskdjdjfshdkfjksd skdjfhd fkjsdhf shdk djkhs dkfhsd f"
+          gitUrl="https://www.google.it"
+          demoUrl="https://cv-daniel-rodriguez.netlify.app"
+          technologies={["react", "php", "html", "css"]}
         />
       </div>
     </>
