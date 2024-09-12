@@ -6,7 +6,7 @@ import ParticlesBackground from "./Components/ParticlesBackground";
 function App() {
   return (
     <>
-      <div className="absolute">
+      <div className="absolute -z-10">
         <ParticlesBackground />
       </div>
       <Header />
