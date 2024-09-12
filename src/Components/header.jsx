@@ -66,7 +66,7 @@ function Header() {
           </ul>
         </nav>
 
-        <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-black via-purple-500 to-black"></div>
+        <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-[var(--fondo)] via-purple-500 to-[var(--fondo)]"></div>
       </div>
     </header>
   );
