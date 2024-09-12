@@ -18,10 +18,12 @@ function ProjectsPage() {
         </h1>
       </div>
 
-      <Project
-        nameProject={"21 BlackJack Game"}
-        imageProject={`${cvProjectImage}`}
-      />
+      <div className="border-[indigo] border rounded-2xl m-7 p-3 text-center h-[35vh]">
+        <Project
+          nameProject={"Curriculum Creator"}
+          imageProject={`${cvProjectImage}`}
+        />
+      </div>
     </>
   );
 }
