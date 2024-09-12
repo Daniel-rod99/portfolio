@@ -1,44 +1,54 @@
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import PropTypes from "prop-types";
 
-function ProjectModal({ isOpen, onClose, nameProject }) {
+const items = [{ id: 1, title: "Item 1", subtitle: "Subtitle 1" }];
+
+function AnimatedItems() {
+  const [selectedId, setSelectedId] = useState(null);
+
   return (
-    <AnimatePresence>
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
-          onClick={onClose} // Cierra el modal cuando se hace clic en el fondo
+    <div>
+      {items.map((item) => (
+        <motion.div
+          key={item.id}
+          layoutId={item.id}
+          className="p-4 mb-4 border cursor-pointer"
+          onClick={() => setSelectedId(item.id)}
+          style={{ backgroundColor: "#f0f0f0", borderRadius: "10px" }}
         >
+          <motion.h5>{item.subtitle}</motion.h5>
+          <motion.h2>{item.title}</motion.h2>
+        </motion.div>
+      ))}
+
+      <AnimatePresence>
+        {selectedId && (
           <motion.div
-            className="bg-white p-6 rounded-2xl shadow-lg max-w-md mx-auto"
-            initial={{ scale: 0 }} // Estado inicial para la animación de aparición
-            animate={{ scale: 1 }} // Estado final (mostrando el modal)
-            exit={{ scale: 0 }} // Animación de salida, reduciendo el modal
-            transition={{ duration: 0.3 }} // Duración de la animación
-            onClick={(e) => e.stopPropagation()} // Evita que el clic dentro del modal lo cierre
+            layoutId={selectedId}
+            className="fixed top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-center"
+            style={{ backgroundColor: "#fff", borderRadius: "10px" }}
           >
-            <h2 className="text-xl font-semibold mb-4">{nameProject}</h2>
-            <p className="mb-4">
-              Este es un proyecto de un juego de blackjack. Contiene una
-              implementación de lógica para jugar al 21 con múltiples jugadores.
-            </p>
-            <button
-              className="bg-red-500 text-white px-4 py-2 rounded"
-              onClick={onClose} // Cierra el modal al hacer clic en el botón
-            >
-              Cerrar
-            </button>
+            {/** Encuentra el item seleccionado */}
+            {items.map(
+              (item) =>
+                item.id === selectedId && (
+                  <div key={item.id} className="text-center">
+                    <motion.h5>{item.subtitle}</motion.h5>
+                    <motion.h2>{item.title}</motion.h2>
+                    <motion.button
+                      onClick={() => setSelectedId(null)}
+                      className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
+                    >
+                      Close
+                    </motion.button>
+                  </div>
+                )
+            )}
           </motion.div>
-        </div>
-      )}
-    </AnimatePresence>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }
 
-ProjectModal.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  onClose: PropTypes.func.isRequired,
-  nameProject: PropTypes.string.isRequired,
-};
-
-export default ProjectModal;
+export default AnimatedItems;

@@ -2,6 +2,8 @@ import { useState } from "react";
 import ProjectModal from "./ProjectModal";
 import PropTypes from "prop-types";
 
+import AnimatedItems from "./ProjectModal";
+
 function Project({ nameProject, imageProject }) {
   const [isModalOpen, setIsModalOpen] = useState(false); // Controla si el modal está abierto
 
@@ -37,6 +39,8 @@ function Project({ nameProject, imageProject }) {
         onClose={closeModal}
         nameProject={"hola"}
       />
+
+      <AnimatedItems />
     </>
   );
 }
