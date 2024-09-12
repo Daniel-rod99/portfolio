@@ -52,7 +52,7 @@ function Project({ nameProject, imageProject }) {
             className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-[#0c0a15] bg-opacity-50 z-50"
           >
             <motion.div
-              className="w-[350px] h-[70vh] bg-white flex flex-col items-center justify-center rounded-2xl p-5"
+              className="w-[350px] h-[70vh] bg-[var(--white)] flex flex-col items-center justify-center rounded-2xl p-5"
               onClick={(e) => e.stopPropagation()} // Evitar que los clics dentro del modal cierren el modal
             >
               <div className="text-center text-black flex flex-col gap-3">
@@ -82,7 +82,10 @@ function Project({ nameProject, imageProject }) {
                     </a>
                   </motion.button>
                   <motion.button>
-                    <a className="flex gap-1" href="https://www.google.it">
+                    <a
+                      className="flex gap-1"
+                      href="https://cv-daniel-rodriguez.netlify.app/"
+                    >
                       Demo
                       <LiaExternalLinkAltSolid />
                     </a>
