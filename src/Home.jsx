@@ -1,8 +1,10 @@
 import ImageProfile from "./Components/ImageProfile";
 import About from "./About";
 import ProjectsPage from "./ProjectsPage";
+import ContactPage from "./ContactPage";
 import Arrow from "./Components/Arrow";
 import { Element } from "react-scroll";
+import Prueba from "./Prueba";
 
 function Home() {
   return (
@@ -33,12 +35,12 @@ function Home() {
         <About />
       </Element>
 
-      <Element name="projects-section" className="element h-[100vh]">
+      {/* <Element name="projects-section" className="element h-[100vh]">
         <ProjectsPage />
-      </Element>
+      </Element> */}
 
       <Element name="projects-section" className="element h-[100vh]">
-        <ProjectsPage />
+        <Prueba />
       </Element>
     </>
   );
