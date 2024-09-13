@@ -4,20 +4,19 @@ import ProjectsPage from "./ProjectsPage";
 import ContactPage from "./ContactPage";
 import Arrow from "./Components/Arrow";
 import { Element } from "react-scroll";
-import Prueba from "./Prueba";
 
 function Home() {
   return (
     <>
       <Element
         name="home-section"
-        className="element mt-32 md:h-[100vh] md:flex md:flex-col md:justify-center"
+        className="element mt-32 md:h-screen md:flex md:flex-col md:justify-center"
       >
         <div className="px-7 // md:flex  md:items-center md:px-7 md:justify-center md:gap-14">
           <div>
             <ImageProfile />
           </div>
-          <div className="w-auto flex flex-col text-center mt-10 gap-3 // md:w-[20rem]">
+          <div className="pt-7 w-auto flex flex-col text-center gap-3 // md:w-[20rem] md:pt-0">
             <h1 className="font-semibold text-3xl">Full Stack Developer</h1>
             <p>
               Hi, I’m Danidev and I’m passionate about web development. Feel
@@ -31,16 +30,16 @@ function Home() {
         </div>
       </Element>
 
-      <Element name="about-section" className="element h-[100vh]">
+      <Element name="about-section" className="element h-screen">
         <About />
       </Element>
 
-      {/* <Element name="projects-section" className="element h-[100vh]">
+      <Element name="projects-section" className="element h-full md:h-screen">
         <ProjectsPage />
-      </Element> */}
+      </Element>
 
-      <Element name="projects-section" className="element h-[100vh]">
-        <Prueba />
+      <Element name="contact-section" className="element h-screen">
+        <ContactPage />
       </Element>
     </>
   );

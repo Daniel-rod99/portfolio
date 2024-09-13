@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 function About() {
   return (
     <>
-      <div className="flex flex-col gap-8 px-7 mt-16">
+      <div className="flex flex-col gap-8 px-7">
         <h1 className="text-3xl font-semibold text-center mt-[2rem] hover:cursor-pointer">
           <Link
             to="about-section"

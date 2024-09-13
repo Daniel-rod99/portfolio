@@ -48,7 +48,7 @@ function Header() {
                 to="projects-section"
                 smooth={true}
                 duration={500} // duración de la animación en milisegundos
-                offset={-100}
+                offset={-120}
               >
                 Projects
               </Link>

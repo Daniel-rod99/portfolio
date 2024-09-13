@@ -1,7 +1,7 @@
 function ContactPage() {
   return (
     <>
-      <div>
+      <div className="h-full">
         <h1>Hola mundo</h1>
       </div>
     </>
