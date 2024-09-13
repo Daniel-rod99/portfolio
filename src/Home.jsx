@@ -36,6 +36,10 @@ function Home() {
       <Element name="projects-section" className="element h-[100vh]">
         <ProjectsPage />
       </Element>
+
+      <Element name="projects-section" className="element h-[100vh]">
+        <ProjectsPage />
+      </Element>
     </>
   );
 }

@@ -12,7 +12,7 @@ function About() {
             duration={500} // duración de la animación en milisegundos
             offset={-100}
           >
-            About
+            About Me
           </Link>
         </h1>
         <p className="text-center">

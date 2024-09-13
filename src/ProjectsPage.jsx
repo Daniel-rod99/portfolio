@@ -10,7 +10,7 @@ function ProjectsPage() {
           <Link
             to="projects-section"
             smooth={true}
-            duration={500} // duración de la animación en milisegundos
+            duration={500}
             offset={-100}
           >
             Projects
@@ -18,18 +18,18 @@ function ProjectsPage() {
         </h1>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2">
         <Project
           nameProject="CV Builder"
           imageProject={`${cvProjectImage}`}
-          description="lorem jshdkjshjdkfhjsdhfhskdjdjfshdkfjksd skdjfhd fkjsdhf shdk djkhs dkfhsd f"
+          description="This is a React project where users can create a resume and download it as a PDF."
           gitUrl="https://www.google.it"
           demoUrl="https://cv-daniel-rodriguez.netlify.app"
-          technologies={["react", "php", "html", "css"]}
+          technologies={["React", "Vite", "NextUI", "Tailwind"]}
         />
         <Project
           nameProject="E-commerce App"
-          imageProject="https://via.placeholder.com/150"
+          imageProject="Image Project"
           description="lorem jshdkjshjdkfhjsdhfhskdjdjfshdkfjksd skdjfhd fkjsdhf shdk djkhs dkfhsd f"
           gitUrl="https://www.google.it"
           demoUrl="https://cv-daniel-rodriguez.netlify.app"

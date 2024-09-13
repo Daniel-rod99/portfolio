@@ -34,7 +34,7 @@ function Project({
   }, [isOpen]);
 
   return (
-    <div className="m-7 text-center h-[35vh]">
+    <div className="mx-7 text-center h-[35vh]">
       <motion.div
         layoutId={`${nameProject}`}
         className="p-3 mb-4 cursor-pointer gap-3 flex flex-col"
@@ -70,7 +70,7 @@ function Project({
                 />
                 <motion.p>{`${description}`}</motion.p>
 
-                <div className="flex justify-between mt-5 gap-3 flex-wrap">
+                <div className="flex justify-evenly flex-wrap">
                   {technologies.map((tech, index) => (
                     <p key={index} className={classFramwork}>
                       {tech}

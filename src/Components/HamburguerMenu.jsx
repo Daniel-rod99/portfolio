@@ -23,11 +23,11 @@ function HamburgerMenu() {
   const modalVariants = {
     closed: {
       x: "100%",
-      transition: { type: "tween", duration: 0.8, ease: "easeInOut" },
+      transition: { type: "tween", duration: 0.5, ease: "easeInOut" },
     }, // El modal se mueve hacia fuera de la pantalla (derecha)
     open: {
       x: 0,
-      transition: { type: "tween", duration: 0.8, ease: "easeInOut" },
+      transition: { type: "tween", duration: 0.5, ease: "easeInOut" },
     }, // El modal cubre la pantalla
   };
 
