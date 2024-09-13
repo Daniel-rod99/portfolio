@@ -34,7 +34,7 @@ function Project({
   }, [isOpen]);
 
   return (
-    <div className="mx-7 text-center h-[35vh]">
+    <div className="grid gap-5 mx-7 text-center">
       <motion.div
         layoutId={`${nameProject}`}
         className="p-3 mb-4 cursor-pointer gap-3 flex flex-col"
@@ -43,7 +43,7 @@ function Project({
         <motion.h5>{nameProject}</motion.h5>
         <motion.img
           src={imageProject}
-          className="h-[25vh] object-contain bg-white rounded-2xl"
+          className="h-[25vh] md:h-[15vh] lg:h-[25vh] object-contain bg-white rounded-2xl"
         />
       </motion.div>
 

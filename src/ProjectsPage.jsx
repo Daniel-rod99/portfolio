@@ -5,8 +5,8 @@ import cvProjectImage from "./assets/ProjectsImages/cvProject.png";
 function ProjectsPage() {
   return (
     <>
-      <div className="flex flex-col gap-8 px-7">
-        <h1 className="text-3xl font-semibold text-center hover:cursor-pointer">
+      <div className="text-center mb-10">
+        <h1 className="text-3xl font-semibold hover:cursor-pointer">
           <Link
             to="projects-section"
             smooth={true}
@@ -18,7 +18,7 @@ function ProjectsPage() {
         </h1>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         <Project
           nameProject="CV Builder"
           imageProject={`${cvProjectImage}`}

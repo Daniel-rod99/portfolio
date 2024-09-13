@@ -6,13 +6,14 @@ import imgReact from "../assets/skillsImage/react.png";
 import imgTailwind from "../assets/skillsImage/tailwind.png";
 import imgMysql from "../assets/skillsImage/mysql.png";
 import imgMongodb from "../assets/skillsImage/mongodb.png";
+import { motion } from "framer-motion";
 
 function Skills() {
   const skillClass = "rounded-[18px] p-1 w-[60px] h-[60px]";
 
   return (
     <>
-      <div className="w-auto px-7 grid gap-8 grid-cols-4">
+      <motion.div className="w-auto px-7 grid gap-8 grid-cols-4 justify-items-center">
         <div className={`${skillClass} bg-[#E65000]`}>
           <img src={`${imgHtml}`} alt="html logo" />
         </div>
@@ -37,7 +38,7 @@ function Skills() {
         <div className={`${skillClass} bg-[var(--white)]`}>
           <img src={`${imgMongodb}`} alt="mongodb logo" />
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
