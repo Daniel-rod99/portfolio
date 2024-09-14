@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@lottiefiles/react-lottie-player": "^3.5.4",
+    "@nextui-org/react": "^2.4.7",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.5.0",
     "axios": "^1.7.7",
