@@ -6,10 +6,9 @@ import { SunIcon } from "./Components/SunIcon";
 export default function Switcher({ isDark, setIsDark }) {
   return (
     <Switch
-      className=""
       isSelected={isDark === "dark"}
       onValueChange={() => setIsDark(isDark === "dark" ? "light" : "dark")}
-      size="lg"
+      size="sm"
       color="success"
       startContent={<SunIcon />}
       endContent={<MoonIcon />}

@@ -14,10 +14,6 @@
   --indigoLight: #a494d1;
 }
 
-body {
-  @apply bg-background text-foreground; /* TailwindCSS estilos para background y texto */
-}
-
 p {
   color: var(--grey);
 }

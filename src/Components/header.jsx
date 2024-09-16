@@ -2,20 +2,24 @@ import PropTypes from "prop-types";
 import HamburgerMenu from "./HamburguerMenu";
 import { Link } from "react-scroll";
 import Switcher from "../Switcher";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Header() {
   const [isDark, setIsDark] = useState("dark");
+  useEffect(() => {
+    document.body.className =
+      isDark === "dark" ? "bg-black text-white" : "bg-white text-black";
+  }, [isDark]);
+
+  const darkMode = `${
+    isDark === "dark"
+      ? "dark bg-background text-white"
+      : "light bg-white text-black"
+  }`;
 
   return (
-    <header
-      className={`${
-        isDark === "dark"
-          ? "dark text-foreground bg-background"
-          : "light bg-white"
-      } fixed top-0 left-0 w-full shadow-md z-10`}
-    >
-      <div className="relative w-auto h-[10vh] flex justify-between px-7 items-center">
+    <header className={`${darkMode} fixed top-0 left-0 w-full shadow-md z-10`}>
+      <div className="w-auto h-[10vh] flex justify-between px-7 items-center">
         <h1 className="font-bold md:text-3xl text-2xl hover:cursor-pointer">
           <Link
             to="home-section"
@@ -27,9 +31,12 @@ function Header() {
           </Link>
         </h1>
 
-        <div>
+        <div className="flex items-center">
+          <div className="md:hidden ">
+            <Switcher isDark={isDark} setIsDark={setIsDark} />
+          </div>
           {/* Componente del menú hamburguesa */}
-          <HamburgerMenu />
+          <HamburgerMenu isDark={isDark} setIsDark={setIsDark} />
         </div>
 
         <nav className="lg:w-[500px] md:w-96 text-xl hidden md:block">
@@ -74,7 +81,11 @@ function Header() {
                 Contact
               </Link>
             </li>
-            <Switcher isDark={isDark} setIsDark={setIsDark} />
+            <li>
+              <div className="md:block">
+                <Switcher isDark={isDark} setIsDark={setIsDark} />
+              </div>
+            </li>
           </ul>
         </nav>
 
