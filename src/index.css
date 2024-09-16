@@ -3,3 +3,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --fondo: #0c0a15;
+  --white: #ffffff;
+  --violet: #9d59ef;
+  --violetDark: #0f071e;
+  --grey: #b8b7bd;
+  --indigo: #7f69dd;
+  --indigoLight: #a494d1;
+}
+
+p {
+  color: var(--grey);
+}
+
+h2 {
+  color: var(--violet);
+}

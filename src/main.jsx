@@ -5,9 +5,11 @@ import App from "./App.jsx";
 import "./index.css";
 
 createRoot(document.getElementById("root")).render(
-  <NextUIProvider>
-    <StrictMode>
-      <App />
-    </StrictMode>
-  </NextUIProvider>
+  <StrictMode>
+    <NextUIProvider>
+      <main className="daniel text-foreground bg-background">
+        <App />
+      </main>
+    </NextUIProvider>
+  </StrictMode>
 );
