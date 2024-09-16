@@ -1,9 +1,20 @@
+import PropTypes from "prop-types";
 import HamburgerMenu from "./HamburguerMenu";
 import { Link } from "react-scroll";
+import Switcher from "../Switcher";
+import { useState } from "react";
 
 function Header() {
+  const [isDark, setIsDark] = useState("dark");
+
   return (
-    <header className="fixed top-0 left-0 w-full shadow-md z-10">
+    <header
+      className={`${
+        isDark === "dark"
+          ? "dark text-foreground bg-background"
+          : "light bg-white"
+      } fixed top-0 left-0 w-full shadow-md z-10`}
+    >
       <div className="relative w-auto h-[10vh] flex justify-between px-7 items-center">
         <h1 className="font-bold md:text-3xl text-2xl hover:cursor-pointer">
           <Link
@@ -63,13 +74,24 @@ function Header() {
                 Contact
               </Link>
             </li>
+            <Switcher isDark={isDark} setIsDark={setIsDark} />
           </ul>
         </nav>
 
-        <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-[var(--fondo)] via-purple-500 to-[var(--fondo)]"></div>
+        <div
+          className={`${
+            isDark === "dark"
+              ? "bg-gradient-to-r from-[var(--fondo)] via-purple-500 to-[var(--fondo)]"
+              : "bg-gradient-to-r from-[var(--white)] via-purple-500 to-[var(--white)]"
+          } absolute bottom-0 left-0 w-full h-[2px] `}
+        ></div>
       </div>
     </header>
   );
 }
+
+Header.propTypes = {
+  isDark: PropTypes.string.isRequired,
+};
 
 export default Header;

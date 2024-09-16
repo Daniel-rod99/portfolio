@@ -1,13 +1,16 @@
 import Header from "./Components/header";
 import Home from "./Home";
 import ParticlesBackground from "./Components/ParticlesBackground";
+import { NextUIProvider } from "@nextui-org/react";
 
 function App() {
   return (
     <>
-      <ParticlesBackground></ParticlesBackground>
-      <Header />
-      <Home />
+      <NextUIProvider>
+        <ParticlesBackground />
+        <Header />
+        <Home />
+      </NextUIProvider>
     </>
   );
 }

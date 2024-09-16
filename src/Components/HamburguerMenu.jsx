@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion"; // Importamos framer-motion
 import { Link } from "react-scroll";
+import PropTypes from "prop-types";
+import Switcher from "../Switcher";
 
 function HamburgerMenu() {
+  const [isDark, setIsDark] = useState("dark");
+
   const [isOpen, setIsOpen] = useState(false);
 
   // Función para abrir/cerrar el menú
@@ -123,7 +127,9 @@ function HamburgerMenu() {
         animate={isOpen ? "open" : "closed"}
         variants={modalVariants}
         transition={{ type: "tween", duration: 0.8 }} // Transición suave con desaceleración
-        className="fixed inset-0 bg-[var(--fondo)] z-40 flex justify-center items-center"
+        className={`${
+          isDark === "dark" ? "dark bg-background" : "light bg-white"
+        } fixed inset-0 z-40 flex justify-center items-center`}
       >
         {/* Nav dentro del modal */}
         <nav className="text-white text-2xl">
@@ -149,10 +155,16 @@ function HamburgerMenu() {
               </motion.li>
             ))}
           </ul>
+          <ul className="absolute top-5 right-80 flex justify-center">
+            <Switcher isDark={isDark} setIsDark={setIsDark} />
+          </ul>
         </nav>
       </motion.div>
     </>
   );
 }
 
+HamburgerMenu.propTypes = {
+  isDark: PropTypes.string.isRequired,
+};
 export default HamburgerMenu;
