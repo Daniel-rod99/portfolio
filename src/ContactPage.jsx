@@ -20,7 +20,7 @@ function ContactPage() {
         <motion.button>
           <motion.a
             className={classIcons}
-            href=""
+            href="https://github.com/Daniel-rod99"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.5 }}
@@ -32,7 +32,7 @@ function ContactPage() {
         <motion.button>
           <a
             className={classIcons}
-            href=""
+            href="https://www.linkedin.com/in/daniel-rodriguez-85a082219/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -42,7 +42,7 @@ function ContactPage() {
         <motion.button>
           <a
             className={classIcons}
-            href=""
+            href="mailto:danielrodriguez246@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
           >
