@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 
 function Header() {
   const [isDark, setIsDark] = useState("dark");
+
   useEffect(() => {
     document.body.className =
       isDark === "dark" ? "bg-black text-white" : "bg-white text-black";

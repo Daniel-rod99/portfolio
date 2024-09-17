@@ -39,7 +39,7 @@ function Home() {
           <ProjectsPage />
         </Element>
 
-        <Element name="contact-section" className="element h-screen">
+        <Element name="contact-section" className="element h-full">
           <ContactPage />
         </Element>
       </div>

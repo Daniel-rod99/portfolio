@@ -43,7 +43,7 @@ function Project({
         <motion.h5>{nameProject}</motion.h5>
         <motion.img
           src={imageProject}
-          className="h-[25vh] md:h-[15vh] lg:h-[25vh] object-contain bg-white rounded-2xl"
+          className={`bg-[var(--indigoLightT)] h-[25vh] md:h-[15vh] lg:h-[25vh] object-contain rounded-2xl py-5`}
         />
       </motion.div>
 

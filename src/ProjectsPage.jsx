@@ -11,7 +11,7 @@ function ProjectsPage() {
             to="projects-section"
             smooth={true}
             duration={500}
-            offset={-120}
+            offset={-100}
           >
             Projects
           </Link>
