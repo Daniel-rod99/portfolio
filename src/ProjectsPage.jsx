@@ -1,17 +1,45 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import Project from "./Components/Project";
 import cvProjectImage from "./assets/ProjectsImages/cvProject.png";
 
 function ProjectsPage() {
+  const [offsetValue, setOffsetValue] = useState(-150); // Valor por defecto para md
+
+  useEffect(() => {
+    // Función para ajustar el offset basado en el tamaño de la ventana
+    function handleResize() {
+      if (window.innerWidth >= 1024) {
+        // lg: pantalla grande
+        setOffsetValue(-300);
+      } else if (window.innerWidth >= 768) {
+        // md: pantalla mediana
+        setOffsetValue(-150);
+      } else {
+        // sm: pantalla pequeña o por defecto
+        setOffsetValue(-100);
+      }
+    }
+
+    // Llamamos la función cuando el componente se monta
+    handleResize();
+
+    // Agregamos un listener para ajustar el offset cuando la ventana cambia de tamaño
+    window.addEventListener("resize", handleResize);
+
+    // Limpiamos el listener cuando el componente se desmonta
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
-      <div className="text-center mb-10">
+      <div className="text-center my-10">
         <h1 className="text-3xl font-semibold hover:cursor-pointer">
           <Link
             to="projects-section"
             smooth={true}
             duration={500}
-            offset={-100}
+            offset={offsetValue} // Offset dinámico basado en el tamaño de pantalla
           >
             Projects
           </Link>

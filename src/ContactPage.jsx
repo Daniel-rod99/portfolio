@@ -8,9 +8,9 @@ function ContactPage() {
   const classIcons = "flex gap-1 items-center text-[50px]";
   return (
     <>
-      <div className="text-center">
+      <div className="text-center lg:mt-[27rem]">
         <h1 className="text-3xl font-semibold hover:cursor-pointer">
-          <Link to="contact-section" smooth={true} duration={500} offset={-100}>
+          <Link to="contact-section" smooth={true} duration={500} offset={-0}>
             Contact
           </Link>
         </h1>

@@ -25,8 +25,8 @@ function Header() {
           <Link
             to="home-section"
             smooth={true}
-            duration={500} // duración de la animación en milisegundos
-            offset={-150}
+            duration={900} // duración de la animación en milisegundos
+            offset={-5000}
           >
             DaniDev
           </Link>
@@ -46,8 +46,8 @@ function Header() {
               <Link
                 to="home-section"
                 smooth={true}
-                duration={500} // duración de la animación en milisegundos
-                offset={-150}
+                duration={1200} // duración de la animación en milisegundos
+                offset={-5000}
               >
                 Home
               </Link>
@@ -57,7 +57,7 @@ function Header() {
                 to="about-section"
                 smooth={true}
                 duration={500} // duración de la animación en milisegundos
-                offset={-100}
+                offset={-300}
               >
                 About
               </Link>
@@ -67,7 +67,7 @@ function Header() {
                 to="projects-section"
                 smooth={true}
                 duration={500} // duración de la animación en milisegundos
-                offset={-120}
+                offset={-150}
               >
                 Projects
               </Link>
@@ -77,7 +77,7 @@ function Header() {
                 to="contact-section"
                 smooth={true}
                 duration={500} // duración de la animación en milisegundos
-                offset={-120}
+                offset={-0}
               >
                 Contact
               </Link>

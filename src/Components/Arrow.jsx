@@ -8,7 +8,7 @@ function Arrow() {
         to="about-section"
         smooth={true}
         duration={500} // duración de la animación en milisegundos
-        offset={-100} // ajusta la posición final del scroll (opcional)
+        offset={-300} // ajusta la posición final del scroll (opcional)
       >
         <Player
           src="https://lottie.host/e830d4bc-d7a2-4f61-8170-65060dd79b97/UQV5PpgPf2.json"

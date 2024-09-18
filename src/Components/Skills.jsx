@@ -9,7 +9,8 @@ import imgMongodb from "../assets/skillsImage/mongodb.png";
 import { motion } from "framer-motion";
 
 function Skills() {
-  const skillClass = "rounded-[18px] p-1 w-[60px] h-[60px]";
+  const skillClass =
+    "rounded-[18px] p-1 w-[60px] h-[60px] border-2 border-[var(--violet)] ";
 
   return (
     <>
