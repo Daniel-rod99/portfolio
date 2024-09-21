@@ -126,7 +126,7 @@ function HamburgerMenu({ isDark }) {
         transition={{ type: "tween", duration: 0.8 }} // Transición suave con desaceleración
         className={`${
           isDark === "dark" ? "bg-black" : "bg-white"
-        } fixed inset-0 z-40 flex justify-center items-center`}
+        } fixed inset-0 z-40 flex justify-center items-center md:hidden`}
       >
         {/* Nav dentro del modal */}
         <nav className=" text-2xl">
