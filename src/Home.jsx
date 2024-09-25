@@ -44,7 +44,7 @@ function Home() {
               style={{ x: xText, y: yText }}
               className="pt-7 flex flex-col text-center gap-3 lg:w-[20rem] lg:pt-0 fixed left-[50rem] top-[30rem]"
             >
-              <h1 className="font-semibold text-3xl">Full Stack Developer</h1>
+              <h1 className="text-3xl font-semibold">Full Stack Developer</h1>
               <p>
                 Hi, I’m Danidev and I’m passionate about web development. Feel
                 free to scroll down to learn more about me. 👋🏼
@@ -73,7 +73,7 @@ function Home() {
               </motion.div>
 
               <motion.div className="pt-7 w-auto flex flex-col text-center gap-3 md:w-[20rem] md:pt-0">
-                <h1 className="font-semibold text-3xl">Full Stack Developer</h1>
+                <h1 className="text-3xl font-semibold">Full Stack Developer</h1>
                 <p>
                   Hi, I’m Danidev and I’m passionate about web development. Feel
                   free to scroll down to learn more about me. 👋🏼
@@ -91,7 +91,7 @@ function Home() {
 
         <Element
           name="about-section"
-          className="element lg:col-span-4 lg:row-span-2 lg:col-start-3 lg:row-start-3 m-auto"
+          className="m-auto element lg:col-span-4 lg:row-span-2 lg:col-start-3 lg:row-start-3"
         >
           <About />
         </Element>

@@ -14,7 +14,7 @@ function Skills() {
 
   return (
     <>
-      <motion.div className="w-auto px-7 grid gap-8 grid-cols-4 justify-items-center">
+      <motion.div className="grid w-auto grid-cols-4 gap-8 px-7 justify-items-center">
         <div className={`${skillClass} bg-[#E65000]`}>
           <img src={`${imgHtml}`} alt="html logo" />
         </div>

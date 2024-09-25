@@ -52,7 +52,7 @@ function About() {
         </p>
       </div>
 
-      <div className="text-center my-7 text-xl mt-24">
+      <div className="mt-24 text-xl text-center my-7">
         <h2>My Skills</h2>
       </div>
 
