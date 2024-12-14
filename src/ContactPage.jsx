@@ -16,7 +16,7 @@ function ContactPage() {
         </h1>
       </div>
 
-      <motion.div className="flex justify-evenly m-full py-10">
+      <motion.div className="flex py-10 justify-evenly m-full">
         <motion.button>
           <motion.a
             className={classIcons}
@@ -30,24 +30,28 @@ function ContactPage() {
           </motion.a>
         </motion.button>
         <motion.button>
-          <a
+          <motion.a
             className={classIcons}
             href="https://www.linkedin.com/in/daniel-rodriguez-85a082219/"
             target="_blank"
             rel="noopener noreferrer"
+            whileHover={{ scale: 1.5 }}
+            whileTap={{ scale: 0.9 }}
           >
             <FaLinkedin />
-          </a>
+          </motion.a>
         </motion.button>
         <motion.button>
-          <a
+          <motion.a
             className={classIcons}
             href="mailto:danielrodriguez246@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
+            whileHover={{ scale: 1.5 }}
+            whileTap={{ scale: 0.9 }}
           >
             <FaMailBulk />
-          </a>
+          </motion.a>
         </motion.button>
       </motion.div>
     </>

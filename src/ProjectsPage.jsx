@@ -33,7 +33,7 @@ function ProjectsPage() {
 
   return (
     <>
-      <div className="text-center my-10">
+      <div className="my-10 text-center">
         <h1 className="text-3xl font-semibold hover:cursor-pointer">
           <Link
             to="projects-section"
