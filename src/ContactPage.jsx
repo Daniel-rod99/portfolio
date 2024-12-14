@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 function ContactPage() {
-  const classIcons = "flex gap-1 items-center text-[80px]";
+  const classIcons = "flex gap-1 items-center text-[40px] md:text-[70px]";
   return (
     <>
       <div className="text-center lg:mt-[27rem]">
@@ -24,7 +24,7 @@ function ContactPage() {
             whileHover={{ scale: 1.5 }}
             whileTap={{ scale: 0.9 }}
           >
-            <Icon icon="line-md:github" className="text-white" />
+            <Icon icon="line-md:github" />
           </motion.a>
         </motion.button>
         <motion.button>
@@ -36,7 +36,7 @@ function ContactPage() {
             whileHover={{ scale: 1.5 }}
             whileTap={{ scale: 0.9 }}
           >
-            <Icon icon="line-md:linkedin" className="text-white" />
+            <Icon icon="line-md:linkedin" />
           </motion.a>
         </motion.button>
         <motion.button>
@@ -48,7 +48,7 @@ function ContactPage() {
             whileHover={{ scale: 1.5 }}
             whileTap={{ scale: 0.9 }}
           >
-            <Icon icon="line-md:email" className="text-white" />
+            <Icon icon="line-md:email" />
           </motion.a>
         </motion.button>
       </motion.div>

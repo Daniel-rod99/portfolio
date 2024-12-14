@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import Project from "./Components/Project";
-import cvProjectImage from "./assets/ProjectsImages/cvProject.png";
+import BlackJackPNG from "./assets/ProjectsImages/blackJack.png";
+import GuitarLa from "./assets/ProjectsImages/guitarla.png";
+import WawaKilla from "./assets/ProjectsImages/wawaKilla.png";
+import ConsumoCal from "./assets/ProjectsImages/consumoscal.png";
 
 function ProjectsPage() {
   const [offsetValue, setOffsetValue] = useState(-150); // Valor por defecto para md
@@ -48,36 +51,36 @@ function ProjectsPage() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         <Project
-          nameProject="CV Builder"
-          imageProject={`${cvProjectImage}`}
-          description="This is a React project where users can create a resume and download it as a PDF."
-          gitUrl="https://www.google.it"
-          demoUrl="https://cv-daniel-rodriguez.netlify.app"
-          technologies={["React", "Vite", "NextUI", "Tailwind"]}
+          nameProject="Game 21 BlackJack"
+          imageProject={`${BlackJackPNG}`}
+          description="This is my first project, a simple card game, marking the beginning of my programming journey, I never uploaded it to GitHub, so there’s no link available."
+          gitUrl="https://21blackjackbydaniel.netlify.app"
+          demoUrl="https://21blackjackbydaniel.netlify.app"
+          technologies={["HTML", "CSS", "JavaScript"]}
         />
         <Project
-          nameProject="E-commerce App"
-          imageProject="Image Project"
-          description="lorem jshdkjshjdkfhjsdhfhskdjdjfshdkfjksd skdjfhd fkjsdhf shdk djkhs dkfhsd f"
-          gitUrl="https://www.google.it"
-          demoUrl="https://cv-daniel-rodriguez.netlify.app"
-          technologies={["react", "php", "html", "css"]}
+          nameProject="Web site Fundation"
+          imageProject={`${WawaKilla}`}
+          description="This is a project for a private foundation, my first paid project."
+          gitUrl="https://github.com/Daniel-rod99/fundacion"
+          demoUrl="https://wawakilla.netlify.app/"
+          technologies={["React", "Tailwind", "React DOM"]}
         />
         <Project
-          nameProject="Portfolio Website"
-          imageProject="https://via.placeholder.com/150"
-          description="hola desde la descripcion"
-          gitUrl="https://www.google.it"
-          demoUrl="https://cv-daniel-rodriguez.netlify.app"
-          technologies={["react", "php", "html", "css"]}
+          nameProject="Web Shop"
+          imageProject={`${GuitarLa}`}
+          description="This project is a shop for selling guitars."
+          gitUrl="https://github.com/Daniel-rod99/guitarShop"
+          demoUrl="https://guitarshopdanidev.netlify.app"
+          technologies={["React", "TypeScript", "useReducer"]}
         />
         <Project
-          nameProject="Portfolio"
-          imageProject="https://via.placeholder.com/150"
-          description="lorem jshdkjshjdkfhjsdhfhskdjdjfshdkfjksd skdjfhd fkjsdhf shdk djkhs dkfhsd f"
-          gitUrl="https://www.google.it"
-          demoUrl="https://cv-daniel-rodriguez.netlify.app"
-          technologies={["react", "php", "html", "css"]}
+          nameProject="consumption calculator"
+          imageProject={`${ConsumoCal}`}
+          description="This project is a consumption calculator, with different tips and saving everything in localStorage."
+          gitUrl="https://github.com/Daniel-rod99/CalculadoraConsumos"
+          demoUrl="https://calculadora-consumos-danidev.netlify.app"
+          technologies={["React", "Tailwind", "TypeScript"]}
         />
       </div>
     </>

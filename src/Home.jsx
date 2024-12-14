@@ -56,7 +56,7 @@ function Home() {
               style={{ x: xArrow, rotate: rotateArrow, y: yArrow }}
               className="flex justify-center fixed left-[55rem] top-[40rem]"
             >
-              <Icon icon="line-md:arrow-down" className="text-4xl text-white" />
+              <Icon icon="line-md:arrow-down" className="text-4xl" />
             </motion.div>
           </Element>
         </div>
@@ -82,7 +82,7 @@ function Home() {
             </motion.div>
 
             <motion.div className="flex justify-center mt-20">
-              <Icon icon="line-md:arrow-down" className="text-4xl text-white" />
+              <Icon icon="line-md:arrow-down" className="text-4xl " />
             </motion.div>
           </Element>
         </div>
