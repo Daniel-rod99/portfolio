@@ -32,7 +32,7 @@ function About() {
 
   return (
     <>
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8 mt-24 md:mt-0">
         <h1 className="text-3xl font-semibold text-center md:pt-7 hover:cursor-pointer">
           <Link
             to="about-section"

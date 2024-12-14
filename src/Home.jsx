@@ -81,7 +81,7 @@ function Home() {
               </motion.div>
             </motion.div>
 
-            <motion.div className="flex justify-center mt-10">
+            <motion.div className="flex justify-center mt-20">
               <Icon icon="line-md:arrow-down" className="text-4xl text-white" />
             </motion.div>
           </Element>
