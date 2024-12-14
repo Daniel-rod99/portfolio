@@ -1,11 +1,9 @@
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-import { FaGithub } from "react-icons/fa";
-import { FaMailBulk } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 function ContactPage() {
-  const classIcons = "flex gap-1 items-center text-[50px]";
+  const classIcons = "flex gap-1 items-center text-[80px]";
   return (
     <>
       <div className="text-center lg:mt-[27rem]">
@@ -26,7 +24,7 @@ function ContactPage() {
             whileHover={{ scale: 1.5 }}
             whileTap={{ scale: 0.9 }}
           >
-            <FaGithub />
+            <Icon icon="line-md:github" className="text-white" />
           </motion.a>
         </motion.button>
         <motion.button>
@@ -38,7 +36,7 @@ function ContactPage() {
             whileHover={{ scale: 1.5 }}
             whileTap={{ scale: 0.9 }}
           >
-            <FaLinkedin />
+            <Icon icon="line-md:linkedin" className="text-white" />
           </motion.a>
         </motion.button>
         <motion.button>
@@ -50,7 +48,7 @@ function ContactPage() {
             whileHover={{ scale: 1.5 }}
             whileTap={{ scale: 0.9 }}
           >
-            <FaMailBulk />
+            <Icon icon="line-md:email" className="text-white" />
           </motion.a>
         </motion.button>
       </motion.div>

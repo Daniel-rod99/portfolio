@@ -1,43 +1,33 @@
-import imgHtml from "../assets/skillsImage/html.png";
-import imgCss from "../assets/skillsImage/css.png";
-import imgJs from "../assets/skillsImage/js.png";
-import imgPhp from "../assets/skillsImage/php.png";
-import imgReact from "../assets/skillsImage/react.png";
-import imgTailwind from "../assets/skillsImage/tailwind.png";
-import imgMysql from "../assets/skillsImage/mysql.png";
-import imgMongodb from "../assets/skillsImage/mongodb.png";
 import { motion } from "framer-motion";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 function Skills() {
-  const skillClass =
-    "rounded-[18px] p-1 w-[60px] h-[60px] border-2 border-[var(--violet)] ";
-
   return (
     <>
       <motion.div className="grid w-auto grid-cols-4 gap-8 px-7 justify-items-center">
-        <div className={`${skillClass} bg-[#E65000]`}>
-          <img src={`${imgHtml}`} alt="html logo" />
+        <div>
+          <Icon icon="devicon:html5" className="text-7xl" />
         </div>
-        <div className={`${skillClass} bg-[#0477BD]`}>
-          <img src={`${imgCss}`} alt="css logo" />
+        <div>
+          <Icon icon="devicon:css3" className="text-7xl" />
         </div>
-        <div className={`${skillClass} bg-[#FED503]`}>
-          <img src={`${imgJs}`} alt="javascript logo" />
+        <div>
+          <Icon icon="devicon:javascript" className="text-7xl" />
         </div>
-        <div className={`${skillClass} bg-[var(--white)]`}>
-          <img src={`${imgPhp}`} alt="php logo" />
+        <div>
+          <Icon icon="devicon:tailwindcss" className="text-7xl" />
         </div>
-        <div className={`${skillClass} bg-[var(--violetDark)]`}>
-          <img src={`${imgReact}`} alt="react logo" />
+        <div>
+          <Icon icon="devicon:react" className="text-7xl" />
         </div>
-        <div className={`${skillClass} bg-[var(--violetDark)]`}>
-          <img src={`${imgTailwind}`} alt="tailwind logo" />
+        <div>
+          <Icon icon="devicon:typescript" className="text-7xl" />
         </div>
-        <div className={`${skillClass} bg-[var(--white)]`}>
-          <img src={`${imgMysql}`} alt="mysqlo logo" />
+        <div>
+          <Icon icon="devicon:mysql" className="text-7xl" />
         </div>
-        <div className={`${skillClass} bg-[var(--white)]`}>
-          <img src={`${imgMongodb}`} alt="mongodb logo" />
+        <div>
+          <Icon icon="devicon:mongodb" className="text-7xl" />
         </div>
       </motion.div>
     </>

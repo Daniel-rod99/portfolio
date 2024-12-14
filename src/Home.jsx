@@ -3,8 +3,8 @@ import ImageProfile from "./Components/ImageProfile";
 import About from "./About";
 import ProjectsPage from "./ProjectsPage";
 import ContactPage from "./ContactPage";
-import Arrow from "./Components/Arrow";
 import { Element } from "react-scroll";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 function Home() {
   const { scrollYProgress } = useScroll();
@@ -56,7 +56,7 @@ function Home() {
               style={{ x: xArrow, rotate: rotateArrow, y: yArrow }}
               className="flex justify-center fixed left-[55rem] top-[40rem]"
             >
-              <Arrow />
+              <Icon icon="line-md:arrow-down" className="text-4xl text-white" />
             </motion.div>
           </Element>
         </div>
@@ -82,7 +82,7 @@ function Home() {
             </motion.div>
 
             <motion.div className="flex justify-center">
-              <Arrow />
+              <Icon icon="line-md:arrow-down" className="text-4xl text-white" />
             </motion.div>
           </Element>
         </div>
