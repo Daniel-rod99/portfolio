@@ -11,15 +11,15 @@ function Home() {
 
   // Transformations for ImageProfile
   const xImage = useTransform(scrollYProgress, [0, 0.3], [0, -395]);
-  const yImage = useTransform(scrollYProgress, [0, 0.3], [0, -200]);
+  const yImage = useTransform(scrollYProgress, [0, 0.3], [0, -120]);
 
   // Transformations for text
   const xText = useTransform(scrollYProgress, [0, 0.3], [0, -750]);
-  const yText = useTransform(scrollYProgress, [0, 0.3], [0, 50]);
+  const yText = useTransform(scrollYProgress, [0, 0.3], [0, 160]);
 
   // Transformations for arrow
-  const xArrow = useTransform(scrollYProgress, [0, 0.3], [0, -735]);
-  const yArrow = useTransform(scrollYProgress, [0, 0.3], [0, 50]);
+  const xArrow = useTransform(scrollYProgress, [0, 0.3], [0, -700]);
+  const yArrow = useTransform(scrollYProgress, [0, 0.3], [0, 160]);
   const rotateArrow = useTransform(scrollYProgress, [0, 0.3], [0, -90]);
 
   return (
@@ -81,7 +81,7 @@ function Home() {
               </motion.div>
             </motion.div>
 
-            <motion.div className="flex justify-center">
+            <motion.div className="flex justify-center mt-10">
               <Icon icon="line-md:arrow-down" className="text-4xl text-white" />
             </motion.div>
           </Element>

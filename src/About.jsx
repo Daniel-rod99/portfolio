@@ -43,7 +43,7 @@ function About() {
             About Me
           </Link>
         </h1>
-        <p className="text-center mx-7">
+        <p className="text-center md:mx-28 mx-7">
           I’m Daniel Rodriguez, a junior web developer with a passion for both
           front-end and back-end technologies. I’m constantly learning and
           exploring new tools and frameworks to create innovative web solutions.
