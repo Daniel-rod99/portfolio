@@ -9,7 +9,7 @@ export default function Switcher({ isDark, setIsDark }) {
       isSelected={isDark === "dark"}
       onValueChange={() => setIsDark(isDark === "dark" ? "light" : "dark")}
       size="sm"
-      color="success"
+      color="default"
       startContent={<SunIcon />}
       endContent={<MoonIcon />}
     ></Switch>

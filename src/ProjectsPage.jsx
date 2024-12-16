@@ -53,7 +53,7 @@ function ProjectsPage() {
         <Project
           nameProject="Game 21 BlackJack"
           imageProject={`${BlackJackPNG}`}
-          description="This is my first project, a simple card game, marking the beginning of my programming journey, I never uploaded it to GitHub, so there’s no link available."
+          description="This is my first project, using HTML, CSS, and JavaScript. It’s a 21 Blackjack game."
           gitUrl="https://21blackjackbydaniel.netlify.app"
           demoUrl="https://21blackjackbydaniel.netlify.app"
           technologies={["HTML", "CSS", "JavaScript"]}
@@ -61,7 +61,7 @@ function ProjectsPage() {
         <Project
           nameProject="Web site Fundation"
           imageProject={`${WawaKilla}`}
-          description="This is a project for a private foundation, my first paid project."
+          description="This is a project that is a website for a foundation that is just starting out. I developed it using tools like React, Tailwind CSS, and React Router DOM."
           gitUrl="https://github.com/Daniel-rod99/fundacion"
           demoUrl="https://wawakilla.netlify.app/"
           technologies={["React", "Tailwind", "React DOM"]}
@@ -69,7 +69,7 @@ function ProjectsPage() {
         <Project
           nameProject="Web Shop"
           imageProject={`${GuitarLa}`}
-          description="This project is a shop for selling guitars."
+          description="This is a project for an online guitar store where the main goal was to learn how to use LocalStorage, work with APIs, and simulate a database."
           gitUrl="https://github.com/Daniel-rod99/guitarShop"
           demoUrl="https://guitarshopdanidev.netlify.app"
           technologies={["React", "TypeScript", "useReducer"]}

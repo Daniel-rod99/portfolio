@@ -10,7 +10,7 @@ function Home() {
   const { scrollYProgress } = useScroll();
 
   // Transformations for ImageProfile
-  const xImage = useTransform(scrollYProgress, [0, 0.3], [0, -395]);
+  const xImage = useTransform(scrollYProgress, [0, 0.3], [0, -355]);
   const yImage = useTransform(scrollYProgress, [0, 0.3], [0, -120]);
 
   // Transformations for text
@@ -18,7 +18,7 @@ function Home() {
   const yText = useTransform(scrollYProgress, [0, 0.3], [0, 160]);
 
   // Transformations for arrow
-  const xArrow = useTransform(scrollYProgress, [0, 0.3], [0, -700]);
+  const xArrow = useTransform(scrollYProgress, [0, 0.3], [0, -775]);
   const yArrow = useTransform(scrollYProgress, [0, 0.3], [0, 160]);
   const rotateArrow = useTransform(scrollYProgress, [0, 0.3], [0, -90]);
 
@@ -42,9 +42,11 @@ function Home() {
             {/* Animated Text */}
             <motion.div
               style={{ x: xText, y: yText }}
-              className="pt-7 flex flex-col text-center gap-3 lg:w-[20rem] lg:pt-0 fixed left-[50rem] top-[30rem]"
+              className="pt-7 flex flex-col text-center gap-3 lg:w-[25rem] lg:pt-0 fixed left-[50rem] top-[30rem]"
             >
-              <h1 className="text-3xl font-semibold">Full Stack Developer</h1>
+              <h1 className="text-3xl font-semibold">
+                Frontend React Developer
+              </h1>
               <p>
                 Hi, I’m Danidev and I’m passionate about web development. Feel
                 free to scroll down to learn more about me. 👋🏼
@@ -54,7 +56,7 @@ function Home() {
             {/* Animated Arrow */}
             <motion.div
               style={{ x: xArrow, rotate: rotateArrow, y: yArrow }}
-              className="flex justify-center fixed left-[55rem] top-[40rem]"
+              className="flex justify-center fixed left-[62rem] top-[40rem]"
             >
               <Icon icon="line-md:arrow-down" className="text-4xl" />
             </motion.div>
@@ -67,13 +69,15 @@ function Home() {
             name="home-section"
             className="element pt-[132px] md:h-screen md:flex md:flex-col md:justify-center md:col-span-4 md:row-span-2"
           >
-            <motion.div className="px-7 md:flex md:items-center md:px-7 md:justify-center md:gap-14">
+            <motion.div className="px-7 md:flex md:items-center md:justify-center md:gap-14">
               <motion.div>
                 <ImageProfile />
               </motion.div>
 
               <motion.div className="pt-7 w-auto flex flex-col text-center gap-3 md:w-[20rem] md:pt-0">
-                <h1 className="text-3xl font-semibold">Full Stack Developer</h1>
+                <h1 className="text-3xl font-semibold">
+                  Frontend React Developer
+                </h1>
                 <p>
                   Hi, I’m Danidev and I’m passionate about web development. Feel
                   free to scroll down to learn more about me. 👋🏼
