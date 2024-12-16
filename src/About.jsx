@@ -44,11 +44,12 @@ function About() {
           </Link>
         </h1>
         <p className="text-center md:mx-28 mx-7">
-          I’m Daniel Rodriguez, a junior web developer with a passion for both
-          front-end and back-end technologies. I’m constantly learning and
-          exploring new tools and frameworks to create innovative web solutions.
-          Currently based in Milan, Italy, I’m eager to grow my skills and
-          contribute to exciting projects.
+          I’m Daniel Rodriguez, a junior web developer specialized in front-end
+          development with React and related technologies. I’m passionate about
+          continuously learning and exploring new tools and frameworks to create
+          innovative web solutions. Currently based in Milan, Italy, I’m excited
+          to further develop my skills and contribute to dynamic and challenging
+          projects.
         </p>
       </div>
 

@@ -6,6 +6,15 @@ function Skills() {
     <>
       <motion.div className="grid w-auto grid-cols-4 gap-8 px-7 justify-items-center">
         <div>
+          <Icon icon="devicon:react" className="text-5xl md:text-7xl" />
+        </div>
+        <div>
+          <Icon icon="devicon:typescript" className="text-5xl md:text-7xl" />
+        </div>
+        <div>
+          <Icon icon="devicon:tailwindcss" className="text-5xl md:text-7xl" />
+        </div>
+        <div>
           <Icon icon="devicon:html5" className="text-5xl md:text-7xl" />
         </div>
         <div>
@@ -13,15 +22,6 @@ function Skills() {
         </div>
         <div>
           <Icon icon="devicon:javascript" className="text-5xl md:text-7xl" />
-        </div>
-        <div>
-          <Icon icon="devicon:tailwindcss" className="text-5xl md:text-7xl" />
-        </div>
-        <div>
-          <Icon icon="devicon:react" className="text-5xl md:text-7xl" />
-        </div>
-        <div>
-          <Icon icon="devicon:typescript" className="text-5xl md:text-7xl" />
         </div>
         <div>
           <Icon icon="devicon:mysql" className="text-5xl md:text-7xl" />
