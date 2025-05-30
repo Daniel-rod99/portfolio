@@ -41,7 +41,7 @@ function Header() {
               wrapper="span"
               cursor={true}
               repeat={Infinity}
-              style={{ fontSize: "1em", display: "inline-block" }}
+              style={{ fontSize: "1rem", display: "inline-block" }}
             />
           </Link>
         </h1>
