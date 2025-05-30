@@ -11,7 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@iconify/react": "^5.1.0",
+    "@iconify/react": "^5.2.1",
     "@lottiefiles/react-lottie-player": "^3.5.4",
     "@nextui-org/react": "^2.4.7",
     "@nextui-org/switch": "^2.0.34",

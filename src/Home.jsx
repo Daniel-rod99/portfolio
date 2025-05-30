@@ -4,7 +4,7 @@ import About from "./About";
 import ProjectsPage from "./ProjectsPage";
 import ContactPage from "./ContactPage";
 import { Element } from "react-scroll";
-import { Icon } from "@iconify/react/dist/iconify.js";
+import { Icon } from "@iconify/react";
 
 function Home() {
   const { scrollYProgress } = useScroll();
