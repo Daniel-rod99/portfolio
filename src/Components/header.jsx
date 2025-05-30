@@ -3,6 +3,7 @@ import HamburgerMenu from "./HamburguerMenu";
 import { Link } from "react-scroll";
 import Switcher from "../Switcher";
 import { useState, useEffect } from "react";
+import { TypeAnimation } from "react-type-animation";
 
 function Header() {
   const [isDark, setIsDark] = useState("dark");
@@ -21,14 +22,27 @@ function Header() {
   return (
     <header className={`${darkMode} fixed top-0 left-0 w-full shadow-md z-10`}>
       <div className="w-auto h-[10vh] flex justify-between px-7 items-center">
-        <h1 className="font-bold md:text-3xl text-2xl hover:cursor-pointer">
+        <h1 className="text-2xl font-bold md:text-3xl hover:cursor-pointer">
           <Link
             to="home-section"
             smooth={true}
             duration={900} // duración de la animación en milisegundos
             offset={-5000}
           >
-            DaniDev
+            <TypeAnimation
+              sequence={[
+                "DaniDev.", // Types 'One'
+                1500, // Waits 1s
+                "Developer.", // Deletes 'One' and types 'Two'
+                1500, // Waits 2s
+                "Free Lancer.", // Types 'Three' without deleting 'Two'
+                1500,
+              ]}
+              wrapper="span"
+              cursor={true}
+              repeat={Infinity}
+              style={{ fontSize: "1em", display: "inline-block" }}
+            />
           </Link>
         </h1>
 
